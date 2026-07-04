@@ -10,655 +10,179 @@
 
 
 
-<HTML></HTML>;<!DOCTYPE html>
+<HTML></HTML>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFuturo | Inovação e Sustentabilidade no Campo</title>
+    <title>Projeto Agrinho 2026</title>
+    <style>
+        /* CSS Integrado - Cores principais: Verde, Branco, Laranja e Cinza Escuro */
+        :root {
+            --cor-primaria: #2e7d32; /* Verde */
+            --cor-secundaria: #ff9100; /* Laranja */
+            --cor-fundo: #ffffff; /* Branco */
+            --cor-texto: #212121; /* Cinza Escuro */
+            --cor-acessibilidade: #000000;
+            --cor-acessibilidade-texto: #ffff00;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        /* Classe para Modo de Alto Contraste (Acessibilidade) */
+        .alto-contraste {
+            --cor-primaria: #000000 !important;
+            --cor-secundaria: #ffff00 !important;
+            --cor-fundo: #000000 !important;
+            --cor-texto: #ffffff !important;
+            background-color: var(--cor-fundo) !important;
+            color: var(--cor-texto) !important;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a, nav button {
+            margin: 0 10px;
+            color: var(--cor-primaria);
+            text-decoration: none;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 5px solid var(--cor-secundaria);
+            background-color: #fafafa;
+        }
+
+        .alto-contraste section {
+            background-color: #121212;
+            border-left: 5px solid var(--cor-secundaria);
+        }
+
+        .btn-interativo {
+            background-color: var(--cor-secundaria);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn-interativo:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: var(--cor-primaria);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        .mensagem-sucesso {
+            margin-top: 15px;
+            color: var(--cor-primaria);
+            font-weight: bold;
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1 class="logo">🌱 AgroFuturo</h1>
+    <header>
+        <h1>Portal do Agrinho</h1>
+        <p><strong>#agrinho2026</strong> - Inovação e Sustentabilidade no Campo</p>
+    </header>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="#contato">Contato</a></li>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#objetivo">Objetivo & Justificativa</a>
+        <a href="#readme">README</a>
+        <button onclick="alternarContraste()" aria-label="Ativar Alto Contraste" style="border: 1px solid var(--cor-primaria); padding: 5px 10px; border-radius: 4px;">♿ Alto Contraste (Acessibilidade)</button>
+    </nav>
+
+    <div class="container">
+
+        <section id="about">
+            <h2>About (Sobre o Projeto)</h2>
+            <p>O Programa Agrinho é uma iniciativa de responsabilidade social que leva educação, cidadania e consciência ambiental para milhares de estudantes. Em 2026, focamos em como a tecnologia digital e as práticas sustentáveis transformam a realidade do produtor rural de forma <strong>original</strong> e eficiente.</p>
+        </section>
+
+        <section id="objetivo">
+            <h2>Objetivo & Justificativa</h2>
+            <h3>Objetivo:</h3>
+            <p>Incentivar o desenvolvimento de propostas pedagógicas e soluções criativas que conectem o ambiente escolar à rotina e aos desafios do campo sustentável.</p>
+            
+            <h3>Justificativa:</h3>
+            <p>A aproximação das novas gerações com o agronegócio consciente garante a segurança alimentar do futuro e promove o uso inteligente dos recursos naturais, valorizando o trabalhador rural.</p>
+        </section>
+
+        <section id="readme">
+            <h2>README (Instruções do Sistema)</h2>
+            <p>Este é um protótipo web conceitual desenvolvido para a banca do <strong>#agrinho2026</strong>.</p>
+            <ul>
+                <li><strong>Instalação:</strong> Basta clonar ou baixar este arquivo único e executá-lo diretamente no navegador.</li>
+                <li><strong>Tecnologias:</strong> HTML5 estrutural, CSS3 para estilização com variáveis dinâmicas e JavaScript Vanilla para acessibilidade e interações.</li>
             </ul>
-
-            <button id="menu-btn">
-                ☰
-            </button>
-        </nav>
-    </div>
-</header>
-
-<section class="hero" id="inicio">
-
-    <div class="hero-texto">
-
-        <h2>Inovação e Sustentabilidade no Campo</h2>
-
-        <p>
-            Tecnologia, eficiência e responsabilidade ambiental
-            para transformar o agronegócio brasileiro.
-        </p>
-
-        <a href="#servicos" class="botao">
-            Conheça nossos serviços
-        </a>
+            
+            <button class="btn-interativo" onclick="mostrarInteracao()">Participar do Agrinho 2026</button>
+            <p id="msgInteracao" class="mensagem-sucesso">🎉 Obrigado pelo seu interesse! Juntos construímos o futuro do campo.</p>
+        </section>
 
     </div>
 
-</section>
-
-<section class="sobre" id="sobre">
-
-    <div class="container">
-
-        <h2>Quem Somos</h2>
-
-        <p>
-
-            A AgroFuturo é uma empresa especializada em soluções
-            inteligentes para o agronegócio. Nosso objetivo é aumentar
-            a produtividade das propriedades rurais utilizando
-            tecnologia, inovação e práticas sustentáveis.
-
-        </p>
-
-    </div>
-
-</section>
-
-<section class="servicos" id="servicos">
-
-    <div class="container">
-
-        <h2>Nossos Serviços</h2>
-
-        <div class="cards">
-
-            <div class="card">
-
-                <h3>🚜 Agricultura de Precisão</h3>
-
-                <p>
-                    Monitoramento inteligente para aumentar a produtividade.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>🌿 Sustentabilidade</h3>
-
-                <p>
-                    Técnicas agrícolas que preservam os recursos naturais.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>📊 Consultoria Rural</h3>
-
-                <p>
-                    Planejamento estratégico para propriedades rurais.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="sustentabilidade" id="sustentabilidade">
-
-    <div class="container">
-
-        <h2>Sustentabilidade</h2>
-
-        <p>
-
-            Trabalhamos para promover uma agricultura mais eficiente,
-            reduzindo desperdícios, preservando o solo e incentivando
-            práticas ambientalmente responsáveis.
-
-        </p>
-
-    </div>
-
-</section>
-
-<section class="estatisticas">
-
-    <div class="container">
-
-        <div class="numero">
-
-            <h2>500+</h2>
-
-            <p>Clientes</p>
-
-        </div>
-
-        <div class="numero">
-
-            <h2>1200+</h2>
-
-            <p>Projetos</p>
-
-        </div>
-
-        <div class="numero">
-
-            <h2>15</h2>
-
-            <p>Anos de Experiência</p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="contato" id="contato">
-
-    <div class="container">
-
-        <h2>Entre em Contato</h2>
-
-        <form>
-
-            <input
-                type="text"
-                placeholder="Nome"
-                required
-            >
-
-            <input
-                type="email"
-                placeholder="E-mail"
-                required
-            >
-
-            <textarea
-                placeholder="Mensagem"
-                rows="6"
-                required
-            ></textarea>
-
-            <button type="submit">
-
-                Enviar
-
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-<footer>
-
-    <div class="container">
-
-        <p>
-
-            © 2026 AgroFuturo — Todos os direitos reservados.
-
-        </p>
-
-    </div>
-
-</footer>
-
-<button id="topo">
-
-⬆
-
-</button>
-
-<script src="script.js"></script>
-
-</body>/* ===========================
-   RESET
-=========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f5f7f4;
-    color:#333;
-    line-height:1.6;
-}
-
-/* ===========================
-   CONTAINER
-=========================== */
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-/* ===========================
-   CABEÇALHO
-=========================== */
-
-header{
-    background:#1b5e20;
-    color:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 8px rgba(0,0,0,.2);
-}
-
-header .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 0;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-}
-
-.menu{
-    display:flex;
-    list-style:none;
-}
-
-.menu li{
-    margin-left:25px;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    font-weight:500;
-    transition:.3s;
-}
-
-.menu a:hover{
-    color:#ffd54f;
-}
-
-#menu-btn{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-}
-
-/* ===========================
-   HERO
-=========================== */
-
-.hero{
-    height:90vh;
-    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-}
-
-.hero-texto{
-    max-width:700px;
-    padding:20px;
-}
-
-.hero h2{
-    font-size:55px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:20px;
-    margin-bottom:35px;
-}
-
-.botao{
-    display:inline-block;
-    background:#43a047;
-    color:white;
-    padding:15px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.botao:hover{
-    background:#2e7d32;
-    transform:translateY(-3px);
-}
-
-/* ===========================
-   SEÇÕES
-=========================== */
-
-section{
-    padding:80px 0;
-}
-
-section h2{
-    text-align:center;
-    margin-bottom:25px;
-    font-size:38px;
-    color:#1b5e20;
-}
-
-section p{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-}
-
-/* ===========================
-   CARDS
-=========================== */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-    margin-top:40px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    transition:.3s;
-    text-align:center;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h3{
-    color:#2e7d32;
-    margin-bottom:15px;
-}
-
-/* ===========================
-   ESTATÍSTICAS
-=========================== */
-
-.estatisticas{
-    background:#2e7d32;
-    color:white;
-}
-
-.estatisticas .container{
-    display:flex;
-    justify-content:space-around;
-    flex-wrap:wrap;
-    gap:30px;
-}
-
-.numero{
-    text-align:center;
-}
-
-.numero h2{
-    color:white;
-    font-size:48px;
-}
-
-.numero p{
-    color:white;
-}
-
-/* ===========================
-   FORMULÁRIO
-=========================== */
-
-form{
-    max-width:650px;
-    margin:40px auto 0;
-}
-
-form input,
-form textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:18px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
-}
-
-form textarea{
-    resize:none;
-}
-
-form button{
-    width:100%;
-    background:#2e7d32;
-    color:white;
-    border:none;
-    padding:16px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:18px;
-    transition:.3s;
-}
-
-form button:hover{
-    background:#1b5e20;
-}
-
-/* ===========================
-   RODAPÉ
-=========================== */
-
-footer{
-    background:#1b5e20;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-
-/* ===========================
-   BOTÃO TOPO
-=========================== */
-
-#topo{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:55px;
-    height:55px;
-    border:none;
-    border-radius:50%;
-    background:#43a047;
-    color:white;
-    font-size:22px;
-    cursor:pointer;
-    display:none;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-    transition:.3s;
-}
-
-#topo:hover{
-    background:#1b5e20;
-    transform:scale(1.1);
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:768px){
-
-.menu{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    right:20px;
-    top:75px;
-    width:220px;
-    background:#1b5e20;
-    padding:20px;
-    border-radius:10px;
-}
-
-.menu.ativo{
-    display:flex;
-}
-
-.menu li{
-    margin:12px 0;
-}
-
-#menu-btn{
-    display:block;
-}
-
-.hero h2{
-    font-size:38px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.estatisticas .container{
-    flex-direction:column;
-}
-
-}// ===========================
-// MENU RESPONSIVO
-// ===========================
-
-const menuBtn = document.getElementById("menu-btn");
-const menu = document.querySelector(".menu");
-
-menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
-});
-
-// Fecha o menu ao clicar em um link
-document.querySelectorAll(".menu a").forEach(link => {
-    link.addEventListener("click", () => {
-        menu.classList.remove("ativo");
-    });
-});
-
-// ===========================
-// BOTÃO VOLTAR AO TOPO
-// ===========================
-
-const topo = document.getElementById("topo");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 300) {
-        topo.style.display = "block";
-    } else {
-        topo.style.display = "none";
-    }
-
-});
-
-topo.addEventListener("click", () => {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
-
-// ===========================
-// ANIMAÇÃO DOS CARDS
-// ===========================
-
-const cards = document.querySelectorAll(".card");
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("mostrar");
+    <footer>
+        <p>&copy; 2026 Projeto Agrinho Original. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Interação 1: Função de Acessibilidade (Alto Contraste)
+        function alternarContraste() {
+            document.body.classList.toggle('alto-contraste');
         }
 
-    });
+        // Interação 2: Ação do Botão Principal
+        function mostrarInteracao() {
+            const mensagem = document.getElementById('msgInteracao');
+            mensagem.style.display = 'block';
+            alert('Inscrição simulada com sucesso no #agrinho2026!');
+        }
+    </script>
 
-}, {
-    threshold: 0.2
-});
-
-cards.forEach(card => {
-
-    card.classList.add("esconder");
-    observer.observe(card);
-
-});
-
-// ===========================
-// FORMULÁRIO
-// ===========================
-
-const formulario = document.querySelector("form");
-
-formulario.addEventListener("submit", function (e) {
-
-    e.preventDefault();
-
-    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-
-    formulario.reset();
-
-});
-
-// ===========================
-// ANO AUTOMÁTICO NO RODAPÉ
-// ===========================
-
-const rodape = document.querySelector("footer p");
-
-const ano = new Date().getFullYear();
-
-rodape.innerHTML = `© ${ano} AgroFuturo — Todos os direitos reservados.`;
+</body>
 </html>
