@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<HTML>
-    <head>
-        <title>produção de carbono</title>
-        <meta charset="utf-8"/>
-    </head>
-
-
-
-
-
-
-<HTML></HTML>
+HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Agrinho 2026</title>
+    <title>Exemplo Interativo</title>
     <style>
-       </head>
-        <body>
-        <h1> meu site </h1>
-        <p> vou compartilhar o conhecimento sobre a producção de carbono</P>
-        </body>
-        </html>
-        
+        #texto {
+            color: green;
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="texto">Texto Inicial (Verde)</h1>
+    <button onclick="mudarCor()">Mudar Cor</button>
+
+    <script>
+        function mudarCor() {
+            document.getElementById("texto").style.color = "orange";
+            document.getElementById("texto").innerText = "Texto Alterado (Laranja)!";
+        }
+    </script>
+
+</body>
+</html>
