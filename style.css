@@ -1,1 +1,90 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f3;
+    color: #ad4b1d;
+    line-height: 1.6;
+}
 
+h1{
+    background-color: #38e00d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+p{
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 18px;
+}
+
+ul{
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding-left: 25px;
+}
+
+li{
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+#btnModoEscuro{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #38e00d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#btnModoEscuro:hover{
+    background: #38e00d;
+}
+
+.dark{
+    background: #8f5a15;
+    color: white;
+}
+
+.dark h1{
+    background:#8f5a15;
+}
+
+.dark footer{
+    background: #8f5a15;
+}
+
+.dark p,
+.dark li{
+    color: #eee;
+}
+
+input{
+    padding: 8px;
+    margin: 5px;
+}
+
+button{
+    padding: 8px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+#mensagem{
+    margin-top: 15px;
+    font-weight: bold;
+}
